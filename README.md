@@ -1,2 +1,176 @@
 # portfolio
 Portfólio pessoal - Thayná Agna | Desenvolvedora Full Stack em formação 
+
+[index.html](https://github.com/user-attachments/files/27425171/index.html)
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thayná Agna - Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navegação -->
+  <nav>
+    <div class="nav-logo">Thayná Agna</div>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#experiencia">Experiência</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <button id="menu-btn">☰</button>
+  </nav>
+
+  <!-- Introdução -->
+  <header id="sobre">
+    <div class="header-content">
+      <div class="header-texto">
+        <h1>Olá, eu sou <span>Thayná Agna</span> 👋</h1>
+        <p>Desenvolvedora Full Stack em formação | Python • HTML • CSS • JavaScript</p>
+        <p class="bio">Auxiliar Administrativo em transição para Desenvolvedora Full Stack Júnior. Apaixonada por tecnologia, fotografia e marketing. Transformando café em código! ☕</p>
+        <div class="header-btns">
+          <a href="#projetos" class="btn-primary">Ver Projetos</a>
+          <a href="#contato" class="btn-secondary">Contato</a>
+        </div>
+      </div>
+      <div class="header-img">
+        <img src="https://avatars.githubusercontent.com/thaynaagna" alt="Foto de perfil de Thayná Agna"/>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Habilidades -->
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="habilidades-grid">
+        <div class="habilidade-card">
+          <span>🐍</span>
+          <p>Python</p>
+        </div>
+        <div class="habilidade-card">
+          <span>🌐</span>
+          <p>HTML</p>
+        </div>
+        <div class="habilidade-card">
+          <span>🎨</span>
+          <p>CSS</p>
+        </div>
+        <div class="habilidade-card">
+          <span>⚡</span>
+          <p>JavaScript</p>
+        </div>
+        <div class="habilidade-card">
+          <span>🖥️</span>
+          <p>Node.js</p>
+        </div>
+        <div class="habilidade-card">
+          <span>📷</span>
+          <p>Marketing</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos">
+      <h2>Projetos</h2>
+      <div class="projetos-grid">
+        <div class="projeto-card">
+          <h3>🧮 Calculista</h3>
+          <p>Calculadora simples feita com HTML + JavaScript, sem uso de CSS.</p>
+          <a href="https://github.com/thaynaagna/calculista" target="_blank" class="btn-primary">Ver no GitHub</a>
+        </div>
+        <div class="projeto-card">
+          <h3>💼 Portfólio</h3>
+          <p>Portfólio de desenvolvedora web com projetos, habilidades e informações de contato.</p>
+          <a href="https://github.com/thaynaagna/portfolio" target="_blank" class="btn-primary">Ver no GitHub</a>
+        </div>
+        <div class="projeto-card">
+          <h3>🌐 Mini Site Café</h3>
+          <p>Mini site de café local com HTML semântico, CSS e formulário de contato.</p>
+          <a href="#" class="btn-primary">Ver Projeto</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiência -->
+    <section id="experiencia">
+      <h2>Experiência</h2>
+      <div class="experiencia-lista">
+        <div class="experiencia-card">
+          <h3>💼 Auxiliar Administrativo</h3>
+          <p class="periodo">2020 - Atual</p>
+          <p>Atuação em rotinas administrativas, organização de documentos, atendimento e suporte à equipe.</p>
+        </div>
+        <div class="experiencia-card">
+          <h3>📷 Fotografia e Marketing</h3>
+          <p class="periodo">2019 - Atual</p>
+          <p>Produção de conteúdo visual, fotografia e estratégias de marketing digital para redes sociais.</p>
+        </div>
+        <div class="experiencia-card">
+          <h3>💻 Desenvolvimento Web</h3>
+          <p class="periodo">2024 - Atual</p>
+          <p>Em formação como Desenvolvedora Full Stack, estudando Python, HTML, CSS e JavaScript.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <div class="contato-content">
+        <div class="redes-sociais">
+          <h3>Redes Sociais</h3>
+          <a href="https://github.com/thaynaagna" target="_blank" class="rede-btn">GitHub</a>
+          <a href="https://www.linkedin.com/in/thaynaagna" target="_blank" class="rede-btn">LinkedIn</a>
+          <a href="https://instagram.com/thaynaagna" target="_blank" class="rede-btn">Instagram</a>
+        </div>
+        <form class="formulario">
+          <h3>Envie uma mensagem</h3>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" placeholder="Seu nome"/>
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" placeholder="Seu e-mail"/>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" rows="4" placeholder="Sua mensagem..."></textarea>
+
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Thayná Agna - Feito com 🖤 e muito café ☕</p>
+  </footer>
+
+  <script>
+    // Menu mobile
+    const menuBtn = document.getElementById('menu-btn');
+    const navUl = document.querySelector('nav ul');
+    menuBtn.addEventListener('click', () => {
+      navUl.classList.toggle('aberto');
+    });
+
+    // Scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
