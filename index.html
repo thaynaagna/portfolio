@@ -3,170 +3,501 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thayná Ágna - Portfólio</title>
+  <title>Thayná Ágna — Desenvolvedora Full Stack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Navegação -->
-  <nav>
-    <div class="nav-logo">Thayná Ágna</div>
-    <ul>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#experiencia">Experiência</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-    <button id="menu-btn">☰</button>
+  <!-- CURSOR PERSONALIZADO -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-name">TA</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- NAVEGAÇÃO -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">{</span>
+        <span class="logo-text">thayná.dev</span>
+        <span class="logo-bracket">}</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sobre" data-text="sobre">sobre</a></li>
+        <li><a href="#habilidades" data-text="stack">stack</a></li>
+        <li><a href="#projetos" data-text="projetos">projetos</a></li>
+        <li><a href="#experiencia" data-text="trajetória">trajetória</a></li>
+        <li><a href="#contato" class="nav-cta">contratar →</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- Introdução -->
-  <header id="sobre">
-    <div class="header-content">
-      <div class="header-texto">
-        <h1>Olá,eu sou <span>Thayná Ágna</span> 👋</h1>
-        <p>Desenvolvedora Full Stack em formação | Python • HTML • CSS • JavaScript</p>
-        <p class="bio">Auxiliar Administrativo em transição para Desenvolvedora Full Stack. Apaixonada por tecnologia, fotografia e marketing. Transformando código em sonho!💻</p>
-        <div class="header-btns">
-          <a href="#projetos" class="btn-primary">Ver Projetos</a>
-          <a href="#contato" class="btn-secondary">Contato</a>
-        </div>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#sobre" class="mobile-link">01. sobre</a></li>
+      <li><a href="#habilidades" class="mobile-link">02. stack</a></li>
+      <li><a href="#projetos" class="mobile-link">03. projetos</a></li>
+      <li><a href="#experiencia" class="mobile-link">04. trajetória</a></li>
+      <li><a href="#contato" class="mobile-link mobile-cta">05. contratar →</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="grid-lines"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge" data-aos="fade-down">
+        <span class="badge-dot"></span>
+        <span>disponível para projetos</span>
       </div>
-      <div class="header-img">
-        <img src="https://avatars.githubusercontent.com/thaynaagna" alt="Foto de perfil de Thayná Ágna"/>
+      <h1 class="hero-title" data-aos="fade-up">
+        <span class="line-1">Olá, sou</span>
+        <span class="line-2">Thayná<em>Ágna</em></span>
+        <span class="line-3">Full Stack Dev</span>
+      </h1>
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="100">
+        Transformo ideias em produtos digitais de alto impacto.<br>
+        Python · JavaScript · Node.js · UX-first
+      </p>
+      <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
+        <a href="#projetos" class="btn-primary">Ver projetos <span class="btn-arrow">↗</span></a>
+        <a href="#contato" class="btn-ghost">Vamos conversar</a>
+      </div>
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat">
+          <span class="stat-number">3+</span>
+          <span class="stat-label">projetos entregues</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">2026</span>
+          <span class="stat-label">em formação contínua</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">comprometida</span>
+        </div>
       </div>
     </div>
-  </header>
-
-  <main>
-
-    <!-- Habilidades -->
-    <section id="habilidades">
-      <h2>Habilidades</h2>
-      <div class="habilidades-grid">
-        <div class="habilidade-card">
-          <span>🐍</span>
-          <p>Python</p>
-        </div>
-        <div class="habilidade-card">
-          <span>🌐</span>
-          <p>HTML</p>
-        </div>
-        <div class="habilidade-card">
-          <span>🎨</span>
-          <p>CSS</p>
-        </div>
-        <div class="habilidade-card">
-          <span>⚡</span>
-          <p>JavaScript</p>
-        </div>
-        <div class="habilidade-card">
-          <span>🖥️</span>
-          <p>Node.js</p>
-        </div>
-        <div class="habilidade-card">
-          <span>📷</span>
-          <p>Marketing</p>
+    <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+      <div class="avatar-frame">
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <img src="https://avatars.githubusercontent.com/thaynaagna" alt="Thayná Ágna" class="avatar-img">
+        <div class="avatar-badge">
+          <span>FS</span>
+          <p>Full Stack</p>
         </div>
       </div>
-    </section>
+      <div class="floating-card card-1" data-aos="fade-left" data-aos-delay="400">
+        <span class="fc-icon">🐍</span>
+        <div>
+          <p class="fc-label">Python</p>
+          <p class="fc-val">Backend & Scripts</p>
+        </div>
+      </div>
+      <div class="floating-card card-2" data-aos="fade-left" data-aos-delay="500">
+        <span class="fc-icon">⚡</span>
+        <div>
+          <p class="fc-label">JavaScript</p>
+          <p class="fc-val">Frontend & Node</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-    <!-- Projetos -->
-    <section id="projetos">
-      <h2>Projetos</h2>
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container">
+      <div class="section-label" data-aos="fade-right">01 — sobre mim</div>
+      <div class="sobre-grid">
+        <div class="sobre-texto" data-aos="fade-right">
+          <h2 class="section-title">Uma desenvolvedora<br><em>movida por propósito</em></h2>
+          <p>Sou Desenvolvedora Full Stack em constante evolução, apaixonada por criar soluções digitais que unem performance, design e experiência do usuário. Minha trajetória combina tecnologia, criatividade e visão estratégica para desenvolver projetos funcionais, modernos e com impacto real.</p>
+          <p>Atuo com Python, HTML, CSS, JavaScript, e TypeScript desenvolvendo aplicações responsivas, interfaces intuitivas e sistemas que transformam ideias em experiências digitais eficientes. Também trago conhecimentos em fotografia e marketing digital, o que amplia minha percepção sobre estética, comunicação e comportamento do usuário. Acredito que a tecnologia vai além do código: ela conecta pessoas, resolve problemas e cria possibilidades.</p>
+          <div class="sobre-links">
+            <a href="https://github.com/thaynaagna" target="_blank" class="pill-link">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://linkedin.com/in/thaynaagna" target="_blank" class="pill-link">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <div class="sobre-cards" data-aos="fade-left">
+          <div class="info-card">
+            <span class="ic-icon">🎯</span>
+            <h3>Foco em Produto</h3>
+            <p>Penso além do código — entrego experiências que convertem e encantam usuários.</p>
+          </div>
+          <div class="info-card">
+            <span class="ic-icon">🔄</span>
+            <h3>Em Transição</h3>
+            <p>Background administrativo que agrega visão de negócio ao desenvolvimento técnico.</p>
+          </div>
+          <div class="info-card">
+            <span class="ic-icon">📷</span>
+            <h3>Olhar Criativo</h3>
+            <p>Fotografia e marketing formam meu senso estético aplicado a interfaces e produtos.</p>
+          </div>
+          <div class="info-card">
+            <span class="ic-icon">🚀</span>
+            <h3>Crescimento Rápido</h3>
+            <p>Aprendizado acelerado e comprometimento total com cada projeto assumido.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="habilidades">
+    <div class="container">
+      <div class="section-label" data-aos="fade-right">02 — stack técnica</div>
+      <h2 class="section-title" data-aos="fade-up">Tecnologias que <em>domino</em></h2>
+      <div class="stack-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="stack-category">
+          <h3 class="cat-title"><span class="cat-dot"></span> Frontend</h3>
+          <div class="tech-list">
+            <div class="tech-item">
+              <span class="tech-icon">🌐</span>
+              <div>
+                <p class="tech-name">HTML5</p>
+                <div class="tech-bar"><div class="tech-fill" style="--w:85%"></div></div>
+              </div>
+            </div>
+            <div class="tech-item">
+              <span class="tech-icon">🎨</span>
+              <div>
+                <p class="tech-name">CSS3</p>
+                <div class="tech-bar"><div class="tech-fill" style="--w:80%"></div></div>
+              </div>
+            </div>
+            <div class="tech-item">
+              <span class="tech-icon">⚡</span>
+              <div>
+                <p class="tech-name">JavaScript</p>
+                <div class="tech-bar"><div class="tech-fill" style="--w:70%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3 class="cat-title"><span class="cat-dot cat-green"></span> Backend</h3>
+          <div class="tech-list">
+            <div class="tech-item">
+              <span class="tech-icon">🐍</span>
+              <div>
+                <p class="tech-name">Python</p>
+                <div class="tech-bar"><div class="tech-fill" style="--w:75%"></div></div>
+              </div>
+            </div>
+            <div class="tech-item">
+              <span class="tech-icon">🖥️</span>
+              <div>
+                <p class="tech-name">Node.js</p>
+                <div class="tech-bar"><div class="tech-fill" style="--w:60%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3 class="cat-title"><span class="cat-dot cat-amber"></span> Ferramentas</h3>
+          <div class="tech-list">
+            <div class="tech-item">
+              <span class="tech-icon">🐙</span>
+              <div>
+                <p class="tech-name">Git & GitHub</p>
+                <div class="tech-bar"><div class="tech-fill" style="--w:72%"></div></div>
+              </div>
+            </div>
+            <div class="tech-item">
+              <span class="tech-icon">📷</span>
+              <div>
+                <p class="tech-name">Marketing Digital</p>
+                <div class="tech-bar"><div class="tech-fill" style="--w:90%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHIPS DE TECH -->
+      <div class="tech-chips" data-aos="fade-up" data-aos-delay="200">
+        <span class="chip">Python</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">HTML5</span>
+        <span class="chip">CSS3</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">Git</span>
+        <span class="chip">GitHub</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">React Native</span>
+        <span class="chip">UI/UX</span>
+        <span class="chip">Docker</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos">
+    <div class="container">
+      <div class="section-label" data-aos="fade-right">03 — projetos</div>
+      <h2 class="section-title" data-aos="fade-up">O que já <em>construí !</em></h2>
       <div class="projetos-grid">
-        <div class="projeto-card">
-          <h3>🧮 Calculista</h3>
-          <p>Calculadora simples feita com HTML + JavaScript, sem uso de CSS.</p>
-          <a href="https://github.com/thaynaagna/calculista" target="_blank" class="btn-primary">Ver no GitHub</a>
-        </div>
-        <div class="projeto-card">
-          <h3>💼 Portfólio</h3>
-          <p>Portfólio de desenvolvedora web com projetos, habilidades e informações de contato.</p>
-          <a href="https://github.com/thaynaagna/portfolio" target="_blank" class="btn-primary">Ver no GitHub</a>
-        </div>
-        <div class="projeto-card">
-  <h3>☕ Origin Coffee</h3>
-  <p>Site fictício de cafeteria com glassmorphism, menu, sobre e contato.</p>
-  <a href="https://thaynaagna.github.io/origin-coffee/" target="_blank" class="btn-primary">Ver Projeto</a>
-</div>
+
+        <!-- Projeto 1 -->
+        <article class="projeto-card featured" data-aos="fade-up">
+          <div class="proj-header">
+            <div class="proj-icon">☕</div>
+            <div class="proj-meta">
+              <span class="proj-tag">UI/UX · Glassmorphism</span>
+              <span class="proj-tag">Live</span>
+            </div>
+          </div>
+          <h3>Origin Coffee</h3>
+          <p>Site fictício de cafeteria com glassmorphism, seções de menu, sobre e contato. Projeto de vitrine de habilidades em CSS avançado e design responsivo.</p>
+          <div class="proj-techs">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://thaynaagna.github.io/origin-coffee/" target="_blank" class="proj-btn-primary">Ver ao vivo ↗</a>
+            <a href="https://github.com/thaynaagna" target="_blank" class="proj-btn-ghost">GitHub</a>
+          </div>
+          <div class="proj-highlight"></div>
+        </article>
+
+        <!-- Projeto 2 -->
+        <article class="projeto-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="proj-header">
+            <div class="proj-icon">🧮</div>
+            <div class="proj-meta">
+              <span class="proj-tag">Lógica · Algoritmo</span>
+            </div>
+          </div>
+          <h3>Calculista</h3>
+          <p>Calculadora funcional construída com HTML e JavaScript puro. Foco em lógica de programação, manipulação do DOM e UX de entrada numérica.</p>
+          <div class="proj-techs">
+            <span>HTML</span><span>JavaScript</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/thaynaagna/calculista" target="_blank" class="proj-btn-primary">Ver no GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- Projeto 3 -->
+        <article class="projeto-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="proj-header">
+            <div class="proj-icon">💼</div>
+            <div class="proj-meta">
+              <span class="proj-tag">Portfólio · Pessoal</span>
+            </div>
+          </div>
+          <h3>Portfólio Dev</h3>
+          <p>Portfólio de desenvolvedora web com projetos, habilidades e informações de contato. Construído com HTML, CSS e JavaScript responsivo.</p>
+          <div class="proj-techs">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="proj-actions">
+            <a href="https://github.com/thaynaagna/portfolio" target="_blank" class="proj-btn-primary">Ver no GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- CTA Projeto Novo -->
+        <article class="projeto-card proj-cta" data-aos="fade-up" data-aos-delay="300">
+          <div class="proj-cta-inner">
+            <div class="proj-cta-icon">+</div>
+            <h3>Próximo projeto</h3>
+            <p>Seu projeto pode ser o próximo aqui. Vamos construir algo incrível juntos?</p>
+            <a href="#contato" class="proj-btn-primary">Falar comigo →</a>
+          </div>
+        </article>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Experiência -->
-    <section id="experiencia">
-      <h2>Experiência</h2>
-      <div class="experiencia-lista">
-        <div class="experiencia-card">
-          <h3>💼 Auxiliar Administrativo</h3>
-          <p class="periodo">2026 - Atual</p>
-          <p>Atuação em rotinas administrativas, organização de documentos, atendimento e suporte à equipe.</p>
+  <!-- EXPERIÊNCIA / TIMELINE -->
+  <section id="experiencia">
+    <div class="container">
+      <div class="section-label" data-aos="fade-right">04 — trajetória</div>
+      <h2 class="section-title" data-aos="fade-up">Minha <em>jornada</em></h2>
+      <div class="timeline">
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="tl-left">
+            <span class="tl-period">2026 — atual</span>
+          </div>
+          <div class="tl-dot"></div>
+          <div class="tl-right">
+            <div class="tl-card">
+              <span class="tl-badge">💻 Tech</span>
+              <h3>Desenvolvimento Web</h3>
+              <p>Em formação intensiva como Desenvolvedora Full Stack. Estudo Python, HTML, CSS, JavaScript, TypeScript com foco em projetos reais e portfólio sólido.</p>
+              <div class="tl-tags">
+                <span>Python</span><span>JavaScript</span><span>Node.js</span><span>CSS</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="experiencia-card">
-          <h3>📷 Fotografia e Marketing</h3>
-          <p class="periodo">2019 - Anterior</p>
-          <p>Produção de conteúdo visual, fotografia e estratégias de marketing digital para redes sociais.</p>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="tl-left">
+            <span class="tl-period">2026 — atual</span>
+          </div>
+          <div class="tl-dot"></div>
+          <div class="tl-right">
+            <div class="tl-card">
+              <span class="tl-badge">💼 Estudos</span>
+              <h3>Projetos Pessoais</h3>
+              <p>Atuação em rotinas de estudos, e organização de códigos. Visão de processos que agrega ao desenvolvimento de web.</p>
+              <div class="tl-tags">
+                <span>Processos</span><span>Organização</span><span>Comunicação</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="experiencia-card">
-          <h3>💻 Desenvolvimento Web</h3>
-          <p class="periodo">2026 - Cursando</p>
-          <p>Em formação como Desenvolvedora Full Stack, estudando Python, HTML, CSS e JavaScript.</p>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="tl-left">
+            <span class="tl-period">2019 — anterior</span>
+          </div>
+          <div class="tl-dot"></div>
+          <div class="tl-right">
+            <div class="tl-card">
+              <span class="tl-badge">📷 Criativo</span>
+              <h3>Fotografia & Marketing Digital</h3>
+              <p>Produção de conteúdo visual, fotografia profissional e estratégias de marketing para redes sociais. Formação estética que diferencia meu olhar como dev.</p>
+              <div class="tl-tags">
+                <span>Fotografia</span><span>Social Media</span><span>Branding</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="container">
+      <div class="section-label" data-aos="fade-right">05 — contato</div>
+      <div class="contato-grid">
+        <div class="contato-left" data-aos="fade-right">
+          <h2 class="section-title">Vamos <em>trabalhar</em><br>juntos?</h2>
+          <p class="contato-sub">Estou aberta a oportunidades, freelas e projetos desafiadores. Respondo em até 24 horas.</p>
+
+          <div class="contato-info">
+            <a href="https://github.com/thaynaagna" target="_blank" class="contact-row">
+              <div class="contact-icon">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <div>
+                <p class="ci-label">GitHub</p>
+                <p class="ci-val">github.com/thaynaagna</p>
+              </div>
+              <span class="ci-arrow">↗</span>
+            </a>
+            <a href="https://linkedin.com/in/thaynaagna" target="_blank" class="contact-row">
+              <div class="contact-icon">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div>
+                <p class="ci-label">LinkedIn</p>
+                <p class="ci-val">linkedin.com/in/thaynaagna</p>
+              </div>
+              <span class="ci-arrow">↗</span>
+            </a>
+            <a href="https://instagram.com/thaynaagna" target="_blank" class="contact-row">
+              <div class="contact-icon">
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </div>
+              <div>
+                <p class="ci-label">Instagram</p>
+                <p class="ci-val">@thaynaagna</p>
+              </div>
+              <span class="ci-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contato-right" data-aos="fade-left">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="assunto">Assunto</label>
+              <select id="assunto">
+                <option value="">Selecione um assunto</option>
+                <option>Proposta de emprego</option>
+                <option>Projeto Freelance</option>
+                <option>Parceria</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" rows="5" placeholder="Conte um pouco sobre o projeto ou oportunidade..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              <span>Enviar mensagem</span>
+              <span class="submit-arrow">→</span>
+            </button>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contato -->
-    <section id="contato">
-      <h2>Contato</h2>
-      <div class="contato-content">
-        <div class="redes-sociais">
-          <h3>Redes Sociais</h3>
-          <a href="https://github.com/thaynaagna" target="_blank" class="rede-btn">GitHub</a>
-          <a href="https://www.linkedin.com/in/thaynaagna" target="_blank" class="rede-btn">LinkedIn</a>
-          <a href="https://instagram.com/thaynaagna" target="_blank" class="rede-btn">Instagram</a>
-        </div>
-        <form class="formulario">
-          <h3>Envie uma mensagem</h3>
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" placeholder="Seu nome"/>
-
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" placeholder="Seu e-mail"/>
-
-          <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" rows="4" placeholder="Sua mensagem..."></textarea>
-
-          <button type="submit" class="btn-primary">Enviar</button>
-        </form>
-      </div>
-    </section>
-
-  </main>
-
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Thayná Ágna - Feito com muito carinho 🤍</p>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">{</span>
+        <span class="logo-text">thayná.dev</span>
+        <span class="logo-bracket">}</span>
+      </div>
+      <p class="footer-copy">© 2026 Thayná Ágna — Feito com muito carinho e <span class="heart">♥</span></p>
+      <div class="footer-links">
+        <a href="https://github.com/thaynaagna" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/thaynaagna" target="_blank">LinkedIn</a>
+        <a href="https://instagram.com/thaynaagna" target="_blank">Instagram</a>
+      </div>
+    </div>
   </footer>
 
-  <script>
-    // Menu mobile
-    const menuBtn = document.getElementById('menu-btn');
-    const navUl = document.querySelector('nav ul');
-    menuBtn.addEventListener('click', () => {
-      navUl.classList.toggle('aberto');
-    });
-
-    // Scroll suave
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
